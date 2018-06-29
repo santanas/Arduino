@@ -1,0 +1,23 @@
+1) Prepare the circuit with temperature sensors 
+
+2) Launch Arduino program
+Load: TemperatureLM35/temp_LM35D_multi/temp_LM35D_multi.ino
+- You can select how many temperature sensors you want.
+
+(list serial ports: ls /dev/{tty,cu}.* to fine the serial port)
+(screen -L /dev/tty.usbXXXXX 9600 to see the output of arduino directly from
+command line)
+
+3) Write output on txt file with timestamp
+cd  TemperatureLM35
+python temp_LM35D.py 
+- set the output file name
+
+4) Make ROOT tree with temperature and time info
+python makeTree_temp_LM35D.py 
+- set how many sensors you have
+
+5) PLot temperature vs time
+python plot_temp_LM35D.py
+WORKS ONLY FOR 1 SENSOR (FOR THE MOMENT)
+
