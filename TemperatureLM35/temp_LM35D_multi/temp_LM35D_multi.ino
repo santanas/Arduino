@@ -9,7 +9,8 @@ const int sensorPins[] = {
 void setup() {
   // put your setup code here, to run once:
 
-analogReference(INTERNAL);//1.1 V
+//analogReference(INTERNAL);//1.1 V arduino uno
+analogReference(INTERNAL1V1);//1.1 V arduino mega
 Serial.begin(9600);  
 delay(100);
 
